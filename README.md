@@ -1,4 +1,4 @@
-# DevClass-API
+# My-Personal-API
 
 API for team members going through the dev class to interact with. This API is meant to be the server that can help finish each of the tasks the dev class requires.
 
