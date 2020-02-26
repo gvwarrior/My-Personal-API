@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  devclass-api:
+    image: "$DOCKER_IMAGE_NAME"    
+    user: node
+    command: npm run _production
+    restart: unless-stopped
+    env_file:
+      - ../../.env.production
+    networks:
+      - external      
+    labels:
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:devclassapi.foundersclub.software"
+      - "traefik.port=5000"
+
+networks:
+  external:
+    external: true

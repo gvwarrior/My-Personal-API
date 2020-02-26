@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  db:
+    image: "postgres:9.6-alpine"
+    container_name: api-db
+    restart: unless-stopped
+    ports:
+        - "5432:5432"
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
